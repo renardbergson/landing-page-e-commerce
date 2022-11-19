@@ -1,0 +1,46 @@
+@import 'base.scss';
+
+.header {
+    width: 100%;
+    height: 400px;
+    background-color: #707070;
+    position: relative;
+
+    .headerElements {
+        //border: 1px solid black;
+        text-align: center;
+        color: #FFFFFF;
+        position: absolute;
+        width: 70%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .headerText {
+            h1 {
+                font-size: 1.8em;
+                margin: 0.5em 0;
+            }
+    
+            p {
+                font-size: 0.7em;
+            }
+        }
+
+        .headerLinks {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3em;
+
+            button {
+                width: 160px;
+                height: 35px;
+                background-color: #FFFFFF;
+                color: #707070;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+}
