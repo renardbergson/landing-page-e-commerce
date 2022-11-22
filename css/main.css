@@ -147,15 +147,16 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  min-height: 52em;
+  min-height: 50em;
 }
 .main .offers .offerList .offer {
   width: 21%;
 }
 .main .offers .offerList .offer .thumbnail {
-  border: 1px solid #707070;
   width: 100%;
   height: 10em;
+  background-size: cover;
+  background-position: center;
 }
 .main .offers .offerList .offer .name {
   display: block;
@@ -172,7 +173,7 @@ body {
   font-size: 0.7em;
 }
 .main .offers .offerList .offer .newPrice {
-  margin: 0.5em 0 0.2em 0;
+  margin-top: 0.3em;
 }
 .main .offers .offerList .offer button {
   display: block;

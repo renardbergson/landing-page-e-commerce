@@ -162,16 +162,17 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-content: space-between;
-            min-height: 52em;
+            min-height: 50em;
 
             .offer {
                 width: 21%;
     
                 .thumbnail {
-                    border: 1px solid $dark-color;
+                    //border: 1px solid $dark-color;
                     width: 100%;
                     height: 10em;
-                }
+                    background-size: cover;
+                    background-position: center;                }
     
                 .name {
                     display: block;
@@ -191,7 +192,7 @@
                 }
     
                 .newPrice {
-                    margin: 0.5em 0 0.2em 0;
+                    margin-top: 0.3em;
                 }
     
                 button {
