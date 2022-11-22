@@ -17,13 +17,13 @@ function dataShow(data) {
     let offerHTML = ''
 
     for (let product of products) {
-        const { image, name, description, oldPrice, price, installments: {count, value}} = product
+        const { image, id, description, oldPrice, price, installments: {count, value}} = product
         
         offerHTML += `
             <li class="offer">
                 <div class="thumbnail" style="background-image: url(${image});"></div>
 
-                <span class="name">${name}</span>
+                <span class="name"> Produto número ${id} </span>
 
                 <p class="description">
                     ${description}
