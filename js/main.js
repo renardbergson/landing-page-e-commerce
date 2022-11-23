@@ -1,9 +1,23 @@
-const $offerList = document.querySelector('.offerList')
+document.body.onload = request()
 
-fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
-    .then(getResponse)
-    .then(dataShow)
-    .catch(error)
+// ======================================================
+const $offerList = document.querySelector('.offerList')
+const $moreOffers = document.querySelector('.moreOffers')
+// ======================================================
+
+function request(link) {
+    if (!link) {
+        fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
+        .then(getResponse)
+        .then(dataShow)
+        .catch(error)
+    } else {
+        fetch(`https://${link}`)
+        .then(getResponse)
+        .then(dataShow)
+        .catch(error)
+    }
+}
 
 function getResponse(response) {
     if (response.status === 200) {
@@ -40,9 +54,13 @@ function dataShow(data) {
                 <button>Comprar</button>
             </li>
         `
-        console.log(image) // remove !!
+
         $offerList.innerHTML = offerHTML
     }
+    
+    console.log(nextPage) // REMOVER !!!!
+
+   $moreOffers.onclick = () => {request(nextPage)}
 }
 
 function error() {
