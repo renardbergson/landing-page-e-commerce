@@ -23,7 +23,7 @@ function dataShow(data) {
             <li class="offer">
                 <div class="thumbnail" style="background-image: url(${image});"></div>
 
-                <span class="name"> Produto número ${id} </span>
+                <span class="name"> Produto número ${id + 1} </span>
 
                 <p class="description">
                     ${description}
@@ -34,7 +34,7 @@ function dataShow(data) {
                 <h4 class="newPrice">Por: ${price} </h4>
 
                 <span class="installments">
-                    ou ${count}x de R$${value}
+                    ou ${count}x de R$${value.toString().replace('.', ',')}
                 </span>
 
                 <button>Comprar</button>

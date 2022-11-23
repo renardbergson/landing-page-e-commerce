@@ -168,6 +168,9 @@ body {
   line-height: 1.6em;
   margin: 1em 0;
 }
+.main .offers .offerList .offer span {
+  font-weight: bold;
+}
 .main .offers .offerList .offer .oldPrice,
 .main .offers .offerList .offer .installments {
   font-size: 0.7em;
