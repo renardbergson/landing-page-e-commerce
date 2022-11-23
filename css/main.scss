@@ -185,18 +185,19 @@
                     line-height: 1.6em;
                     margin: 1em 0;
                 }
-
-                span {
-                    font-weight: bold;
-                }
     
-                .oldPrice,
-                .installments {
+                .oldPrice {
                     font-size: 0.7em;
+                    text-decoration: line-through;
                 }
     
                 .newPrice {
                     margin-top: 0.3em;
+                }
+
+                .installments {
+                    font-size: 0.7em;
+                    font-weight: bold;
                 }
     
                 button {

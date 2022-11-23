@@ -168,15 +168,16 @@ body {
   line-height: 1.6em;
   margin: 1em 0;
 }
-.main .offers .offerList .offer span {
-  font-weight: bold;
-}
-.main .offers .offerList .offer .oldPrice,
-.main .offers .offerList .offer .installments {
+.main .offers .offerList .offer .oldPrice {
   font-size: 0.7em;
+  text-decoration: line-through;
 }
 .main .offers .offerList .offer .newPrice {
   margin-top: 0.3em;
+}
+.main .offers .offerList .offer .installments {
+  font-size: 0.7em;
+  font-weight: bold;
 }
 .main .offers .offerList .offer button {
   display: block;
