@@ -147,7 +147,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  min-height: 50em;
+  gap: 3em;
 }
 .main .offers .offerList .offer {
   width: 21%;

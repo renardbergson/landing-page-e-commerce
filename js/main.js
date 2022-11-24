@@ -1,9 +1,10 @@
-document.body.onload = request()
-
-// ======================================================
+// ====================================================== VARIABLES =====================================================
 const $offerList = document.querySelector('.offerList')
 const $moreOffers = document.querySelector('.moreOffers')
-// ======================================================
+let offerHTML = ''
+
+// =========================================== API REQUEST AND DATA CONSTRUCT ===========================================
+document.body.onload = request()
 
 function request(link) {
     if (!link) {
@@ -25,10 +26,10 @@ function getResponse(response) {
     }
 }
 
+
 function dataShow(data) {
     const { products, nextPage } = data
 
-    let offerHTML = ''
 
     for (let product of products) {
         const { image, id, description, oldPrice, price, installments: {count, value}} = product
@@ -57,10 +58,11 @@ function dataShow(data) {
 
         $offerList.innerHTML = offerHTML
     }
-    
-    console.log(nextPage) // REMOVER !!!!
 
-   $moreOffers.onclick = () => {request(nextPage)}
+    $moreOffers.onclick = () => {
+        offerHTML = offerHTML
+        request(nextPage)
+    }
 }
 
 function error() {
