@@ -154,6 +154,16 @@ body {
 .main .newsLetter .newsLetterMessage p:last-child {
   margin-top: 0.2em;
 }
+.main .newsLetter .newsLetterMessage .icons {
+  margin: 2em 0;
+}
+.main .newsLetter .newsLetterMessage .icons .icon {
+  font-size: 2em;
+  cursor: pointer;
+}
+.main .newsLetter .newsLetterMessage .icons .facebook {
+  margin: 0 1em;
+}
 .main .division {
   display: flex;
   align-items: center;

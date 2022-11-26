@@ -6,18 +6,6 @@ const $moreOffers = document.querySelector('.moreOffers')
 let offerHTML = ''
 
 // ============================================= NEWSLETTER FORM VALIDATION =============================================
-function formReset() {
-    const { name, email, cpf, genre } = $newsLetterForm
-
-    name.value = ''
-    email.value = ''
-    cpf.value = ''
-
-    genre.forEach(item => {
-        item.checked = false
-      })
-}
-
 $newsLetterForm.onsubmit = e => {
     e.preventDefault()
 
@@ -67,11 +55,47 @@ $newsLetterForm.onsubmit = e => {
     })
 
     if (!isThereAnError) {
-        const $newsLetterMessage = document.querySelector('.newsLetterMessage')
-
-        $newsLetterForm.style.display = 'none'
-        $newsLetterMessage.style.display = 'flex'
+        newsLetterFeedback()
     }
+}
+
+function newsLetterFeedback() {
+    const $newsLetterMessage = document.querySelector('.newsLetterMessage')
+    const $secondsToReturn = document.querySelector('.secondsToReturn')
+    
+    $newsLetterForm.style.display = 'none'
+    $newsLetterMessage.style.display = 'flex'
+    
+    let count = 31
+    
+    const countDown = setInterval(() => {
+        count--
+        $secondsToReturn.innerText = `Retornando em ${count} segundos`
+
+        if (count === 0) {
+            clearInterval(countDown)
+            formReturn()
+        }
+    }, 1000)
+    
+    function formReturn() {
+        $secondsToReturn.innerText = 'Retornando em...'
+        $newsLetterForm.style.display = 'block'
+        $newsLetterMessage.style.display = 'none'
+        formReset()
+    }
+}
+
+function formReset() {
+    const { name, email, cpf, genre } = $newsLetterForm
+
+    name.value = ''
+    email.value = ''
+    cpf.value = ''
+
+    genre.forEach(item => {
+        item.checked = false
+      })
 }
 
 // =========================================== API REQUEST AND DATA CONSTRUCT ===========================================
