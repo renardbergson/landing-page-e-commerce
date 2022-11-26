@@ -6,6 +6,8 @@ const $moreOffers = document.querySelector('.moreOffers')
 let offerHTML = ''
 let productID = 0
 
+const $shareContentForm = document.querySelector('#shareContentForm')
+
 // =========================================== API REQUEST AND DATA CONSTRUCT ===========================================
 document.body.onload = () => {
     formReset()
@@ -167,5 +169,71 @@ function formReset() {
 
     genre.forEach(item => {
         item.checked = false
-      })
+    })
+
+    const { friendName, friendEmail } = $shareContentForm
+
+    friendName.value = ''
+    friendEmail.value = ''
+}
+
+// =========================================== SHARE CONTENT FORM VALIDATION ===========================================
+$shareContentForm.onsubmit = e => {
+    e.preventDefault()
+
+    let isThereAnError = false
+    
+    const { friendName, friendEmail } = $shareContentForm
+
+    if (!friendName.value) {
+        isThereAnError = true
+        friendName.classList.add('inputError')
+        friendName.nextElementSibling.innerText = 'campo vazio!'
+    } else {
+        friendName.classList.remove('inputError')
+        friendName.nextElementSibling.innerText = ''
+    }
+
+    if (!friendEmail.value) {
+        isThereAnError = true
+        friendEmail.classList.add('inputError')
+        friendEmail.nextElementSibling.innerText = 'campo vazio!'
+    } else {
+        friendEmail.classList.remove('inputError')
+        friendEmail.nextElementSibling.innerText = ''
+    }
+
+    if (!isThereAnError) {
+        shareContentFeedback()
+    }
+}
+
+function shareContentFeedback() {
+    const paragraph = document.querySelector('.shareMe')
+    const shareContentFeedback = document.querySelector('.shareContentFeedback')
+    const $secondsToReturn = document.querySelector('.secondsToReturn2')
+
+    paragraph.style.display = 'none'
+    $shareContentForm.style.display = 'none'
+    shareContentFeedback.style.display = 'block'
+
+    let count = 6
+
+    const countDown = setInterval(() => {
+        count--
+        $secondsToReturn.innerText = `Retornando em ${count} segundos`
+
+        if (count === 0) {
+            clearInterval(countDown)
+            shareContentReturn()
+        }
+    }, 1000)
+
+    function shareContentReturn() {
+        $secondsToReturn.innerText = 'Retornando em...'
+        paragraph.style.display = 'block'
+        $shareContentForm.style.display = 'block'
+        shareContentFeedback.style.display = 'none'
+        formReset()
+    }
 }

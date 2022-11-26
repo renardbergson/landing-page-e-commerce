@@ -286,7 +286,14 @@
 
         p {
             font-size: 0.9em;
-            margin: 4em 0;
+
+            &:first-child {
+                margin: 4em 0;
+            }
+
+            &:nth-child(2) {
+                margin: 1em 0;
+            }
         }
 
         form {
@@ -296,6 +303,31 @@
                 display: flex;
                 justify-content: center;
                 gap: 2em;
+
+                div {
+                    position: relative;
+                }
+
+                #name {
+                    &.inputError {
+                        border: 2px solid red;
+                    }
+                }
+
+                #mail {
+                    &.inputError {
+                        border: 2px solid red;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    top: 4.5em;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: red;
+                    font-size: 0.7em;
+                }
             }
 
             label {
@@ -324,6 +356,9 @@
             }
         }
 
+        .shareContentFeedback {
+            display: none;
+        }
     }
 }
 

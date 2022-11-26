@@ -42,7 +42,7 @@
                 </p>
             </div>
 
-            <form id="newsLetterForm" action="salvar.html">
+            <form id="newsLetterForm">
                 <label class="userName">
                     Seu nome: <br>
                     <input name="name" type="text">
@@ -108,24 +108,26 @@
         </div>
 
         <section class="shareContent">
-            <p>
+            <p class="shareMe">
                 Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!
             </p>
 
-            <form action="">
+            <form id="shareContentForm">
                 <div class="friend">
                     <div>
                         <label for="name">
                             Nome do seu amigo:
                         </label>
-                        <input id="name" type="text">
+                        <input id="name" name="friendName" type="text">
+                        <span></span>
                     </div>
     
                     <div>
                         <label for="mail">
                             E-mail:
                         </label>
-                        <input id="mail" type="email">
+                        <input id="mail" name="friendEmail" type="email">
+                        <span></span>
                     </div>
                 </div>
 
@@ -133,6 +135,12 @@
                     Enviar agora
                 </button>
             </form>
+
+            <div class="shareContentFeedback">
+                <span>Obrigado por compartilhar nosso conteúdo!</span>
+                <p>Você é um excelente amigo :)</p>
+                <p class="secondsToReturn2">Retornando em...</p>
+            </div>
         </section>
     </main>
 

@@ -249,7 +249,12 @@ body {
 }
 .main .shareContent p {
   font-size: 0.9em;
+}
+.main .shareContent p:first-child {
   margin: 4em 0;
+}
+.main .shareContent p:nth-child(2) {
+  margin: 1em 0;
 }
 .main .shareContent form .friend {
   text-align: start;
@@ -257,6 +262,23 @@ body {
   display: flex;
   justify-content: center;
   gap: 2em;
+}
+.main .shareContent form .friend div {
+  position: relative;
+}
+.main .shareContent form .friend #name.inputError {
+  border: 2px solid red;
+}
+.main .shareContent form .friend #mail.inputError {
+  border: 2px solid red;
+}
+.main .shareContent form .friend span {
+  position: absolute;
+  top: 4.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  font-size: 0.7em;
 }
 .main .shareContent form label {
   font-size: 0.7em;
@@ -279,6 +301,9 @@ body {
   width: 20em;
   border-radius: 4px;
   cursor: pointer;
+}
+.main .shareContent .shareContentFeedback {
+  display: none;
 }
 
 .footer {
