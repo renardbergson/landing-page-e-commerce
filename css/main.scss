@@ -68,7 +68,7 @@
         justify-content: space-between;
         color: $dark-color;
 
-        div {
+        .newsLetterText {
             width: 55%;
 
             span {
@@ -82,8 +82,9 @@
             }
         }
 
-        form {
+        #newsLetterForm {
             width: 40%;
+            display: block;
             
             label {
                 display: block;
@@ -147,6 +148,28 @@
                 padding: 0.5em 0;
                 border-radius: 4px;
                 cursor: pointer;
+            }
+        }
+
+        .newsLetterMessage {
+            //border: 1px solid black;
+            width: 40%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-size: 1.2em;
+                margin-bottom: 1em;
+            }
+
+            p {
+                font-size: 0.7em;
+
+                &:last-child {
+                    margin-top: 0.2em;
+                }
             }
         }
     }

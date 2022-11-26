@@ -66,30 +66,31 @@ body {
   justify-content: space-between;
   color: #707070;
 }
-.main .newsLetter div {
+.main .newsLetter .newsLetterText {
   width: 55%;
 }
-.main .newsLetter div span {
+.main .newsLetter .newsLetterText span {
   font-size: 1.2em;
 }
-.main .newsLetter div p {
+.main .newsLetter .newsLetterText p {
   font-size: 0.7em;
   line-height: 1.6em;
   margin-top: 1.7em;
 }
-.main .newsLetter form {
+.main .newsLetter #newsLetterForm {
   width: 40%;
+  display: block;
 }
-.main .newsLetter form label {
+.main .newsLetter #newsLetterForm label {
   display: block;
   color: #707070;
   font-size: 0.7em;
   position: relative;
 }
-.main .newsLetter form label:nth-child(2) {
+.main .newsLetter #newsLetterForm label:nth-child(2) {
   margin: 1.5em 0;
 }
-.main .newsLetter form label input {
+.main .newsLetter #newsLetterForm label input {
   margin-top: 0.4em;
   width: 100%;
   padding: 0.2em 0;
@@ -97,37 +98,37 @@ body {
   color: #707070;
   text-align: center;
 }
-.main .newsLetter form label input:last-of-type {
+.main .newsLetter #newsLetterForm label input:last-of-type {
   -moz-appearance: textfield;
 }
-.main .newsLetter form label input.inputError {
+.main .newsLetter #newsLetterForm label input.inputError {
   border: 2px solid red;
 }
-.main .newsLetter form label input::-webkit-outer-spin-button,
-.main .newsLetter form label input::-webkit-inner-spin-button {
+.main .newsLetter #newsLetterForm label input::-webkit-outer-spin-button,
+.main .newsLetter #newsLetterForm label input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.main .newsLetter form label span {
+.main .newsLetter #newsLetterForm label span {
   position: absolute;
   top: 2.2em;
   right: -7em;
   color: red;
 }
-.main .newsLetter form .genre {
+.main .newsLetter #newsLetterForm .genre {
   display: flex;
   align-items: center;
 }
-.main .newsLetter form .genre label {
+.main .newsLetter #newsLetterForm .genre label {
   display: flex;
   margin-left: 0.3em;
 }
-.main .newsLetter form .genre label.inputError {
+.main .newsLetter #newsLetterForm .genre label.inputError {
   color: red;
 }
-.main .newsLetter form .genre input:last-of-type {
+.main .newsLetter #newsLetterForm .genre input:last-of-type {
   margin-left: 2em;
 }
-.main .newsLetter form button {
+.main .newsLetter #newsLetterForm button {
   border: 1px solid #707070;
   width: 100%;
   background-color: #FFFFFF;
@@ -135,6 +136,23 @@ body {
   padding: 0.5em 0;
   border-radius: 4px;
   cursor: pointer;
+}
+.main .newsLetter .newsLetterMessage {
+  width: 40%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .newsLetter .newsLetterMessage span {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.main .newsLetter .newsLetterMessage p {
+  font-size: 0.7em;
+}
+.main .newsLetter .newsLetterMessage p:last-child {
+  margin-top: 0.2em;
 }
 .main .division {
   display: flex;

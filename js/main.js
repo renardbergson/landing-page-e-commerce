@@ -67,7 +67,10 @@ $newsLetterForm.onsubmit = e => {
     })
 
     if (!isThereAnError) {
-        $newsLetterForm.submit()
+        const $newsLetterMessage = document.querySelector('.newsLetterMessage')
+
+        $newsLetterForm.style.display = 'none'
+        $newsLetterMessage.style.display = 'flex'
     }
 }
 
