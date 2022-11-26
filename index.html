@@ -41,20 +41,23 @@
                 </p>
             </div>
 
-            <form action="">
-                <label>
+            <form id="newsLetterForm" action="salvar.html">
+                <label class="userName">
                     Seu nome: <br>
-                    <input type="text">
+                    <input name="name" type="text">
+                    <span></span>
                 </label>
 
-                <label>
+                <label class="userEmail">
                     E-mail: <br>
-                    <input type="email">
+                    <input name="email" type="email">
+                    <span></span>
                 </label>
 
-                <label>
+                <label class="userID">
                     CPF: <br>
-                    <input type="number">
+                    <input name="cpf" type="number">
+                    <span></span>
                 </label>
 
                 <div class="genre">
@@ -65,7 +68,7 @@
                     <label for="fem">Feminino</label>
                 </div>
 
-                <button class="subscribe" type="submit">Enviar</button>
+                <button id="subscribeBtn" class="subscribe" type="submit">Enviar</button>
             </form>
         </section>
 

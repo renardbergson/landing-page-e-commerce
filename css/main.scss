@@ -89,6 +89,7 @@
                 display: block;
                 color: $dark-color;
                 font-size: 0.7em;
+                position: relative;
 
                 &:nth-child(2) {margin: 1.5em 0;}
 
@@ -101,11 +102,22 @@
                     text-align: center;
 
                     &:last-of-type {-moz-appearance: textfield;}
+
+                    &.inputError {
+                        border: 2px solid red;
+                    }
                 }
 
                 input::-webkit-outer-spin-button,
                 input::-webkit-inner-spin-button {
                     -webkit-appearance: none;
+                }
+
+                span {
+                    position: absolute;
+                    top: 2.2em;
+                    right: -7em;
+                    color: red;
                 }
             }
 
@@ -116,6 +128,10 @@
                 label {
                     display: flex;
                     margin-left: 0.3em;
+
+                    &.inputError {
+                        color: red;
+                    }
                 }
 
                 input {

@@ -84,6 +84,7 @@ body {
   display: block;
   color: #707070;
   font-size: 0.7em;
+  position: relative;
 }
 .main .newsLetter form label:nth-child(2) {
   margin: 1.5em 0;
@@ -99,9 +100,18 @@ body {
 .main .newsLetter form label input:last-of-type {
   -moz-appearance: textfield;
 }
+.main .newsLetter form label input.inputError {
+  border: 2px solid red;
+}
 .main .newsLetter form label input::-webkit-outer-spin-button,
 .main .newsLetter form label input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+.main .newsLetter form label span {
+  position: absolute;
+  top: 2.2em;
+  right: -7em;
+  color: red;
 }
 .main .newsLetter form .genre {
   display: flex;
@@ -110,6 +120,9 @@ body {
 .main .newsLetter form .genre label {
   display: flex;
   margin-left: 0.3em;
+}
+.main .newsLetter form .genre label.inputError {
+  color: red;
 }
 .main .newsLetter form .genre input:last-of-type {
   margin-left: 2em;
