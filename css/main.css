@@ -151,8 +151,8 @@ body {
 .main .newsLetter .newsLetterMessage p {
   font-size: 0.7em;
 }
-.main .newsLetter .newsLetterMessage p:last-child {
-  margin-top: 0.2em;
+.main .newsLetter .newsLetterMessage p:last-of-type {
+  margin-top: 0.3em;
 }
 .main .newsLetter .newsLetterMessage .icons {
   margin: 2em 0;
@@ -214,7 +214,7 @@ body {
   text-decoration: line-through;
 }
 .main .offers .offerList .offer .newPrice {
-  margin-top: 0.3em;
+  margin-bottom: -0.2em;
 }
 .main .offers .offerList .offer .installments {
   font-size: 0.7em;
