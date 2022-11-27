@@ -1,4 +1,4 @@
-// ====================================================== VARIABLES =====================================================
+// ****************************************************** VARIABLES *****************************************************
 const $newsLetterForm = document.querySelector('#newsLetterForm')
 
 const $offerList = document.querySelector('.offerList')
@@ -8,7 +8,7 @@ let productID = 0
 
 const $shareContentForm = document.querySelector('#shareContentForm')
 
-// =========================================== API REQUEST AND DATA CONSTRUCT ===========================================
+// ******************************************* API REQUEST AND DATA CONSTRUCT *******************************************
 document.body.onload = () => {
     formReset()
     request()
@@ -76,10 +76,17 @@ function dataShow(data) {
 }
 
 function error() {
-    console.log('ops, ocorreu um erro!')
+    const $errorMessage = document.querySelector('.errorMessage')
+    const $refreshBtn = document.querySelector('#refreshBtn')
+
+    $offerList.style.display = 'none'
+    $moreOffers.style.display = 'none'
+    $errorMessage.style.display = 'block'
+
+    $refreshBtn.onclick = () => {location.reload()}
 }
 
-// ============================================= NEWSLETTER FORM VALIDATION =============================================
+// ********************************************* NEWSLETTER FORM VALIDATION *********************************************
 $newsLetterForm.onsubmit = e => {
     e.preventDefault()
 
@@ -177,7 +184,7 @@ function formReset() {
     friendEmail.value = ''
 }
 
-// =========================================== SHARE CONTENT FORM VALIDATION ===========================================
+// ******************************************* SHARE CONTENT FORM VALIDATION *******************************************
 $shareContentForm.onsubmit = e => {
     e.preventDefault()
 
