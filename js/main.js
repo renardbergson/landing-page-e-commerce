@@ -44,7 +44,7 @@ function dataShow(data) {
         productID++
         
         let verification = Number.isInteger(value)
-        let _value = value
+        let _value
 
         if (!verification) {
             _value = value + '0'

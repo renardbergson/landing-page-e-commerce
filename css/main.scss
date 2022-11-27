@@ -1,5 +1,6 @@
 @import 'base.scss';
 @import 'variables.scss';
+@import 'mixins.scss';
 
 .header {
     width: 100%;
@@ -35,13 +36,7 @@
             margin-top: 3em;
 
             button {
-                width: 12em;
-                height: 2.5em;
-                background-color: $light-color;
-                color: $dark-color;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
+                @include buttonStyle (12em, 2.8em); 
             }
         }
     }
@@ -60,7 +55,6 @@
 .main {
     //border: 1px solid black;
     width: 70%;
-    //min-height: 300vh;
     margin: 0 auto;
 
     .newsLetter {
@@ -141,13 +135,7 @@
             }
 
             button {
-                border: 1px solid $dark-color;
-                width: 100%;
-                background-color: $light-color;
-                color: $dark-color;
-                padding: 0.5em 0;
-                border-radius: 4px;
-                cursor: pointer;
+                @include buttonStyle (100%);
             }
         }
 
@@ -253,15 +241,8 @@
                 }
     
                 button {
-                    display: block;
-                    width: 100%;
-                    padding: 0.3em 0;
+                    @include buttonStyle (100%);
                     margin: 1em 0;
-                    background-color: $light-color;
-                    color: $dark-color;
-                    border: 1px solid $dark-color;
-                    cursor: pointer;
-                    border-radius: 4px;
                 }
             }
         }
@@ -291,15 +272,9 @@
     }
 
     .moreOffers {
+        @include buttonStyle (20em, 2.8em);
         display: block;
         margin: 0 auto;
-        border: 1px solid $dark-color;
-        color: $dark-color;
-        background-color: $light-color;
-        padding: 0.6em 0;
-        width: 20em;
-        border-radius: 4px;
-        cursor: pointer;
     }
 
     .shareContent {
@@ -368,14 +343,7 @@
             }
 
             .shareWithFriend {
-                border: 1px solid $dark-color;
-                width: 10em;
-                background-color: $light-color;
-                color: $dark-color;
-                padding: 0.5em 0;
-                width: 20em;
-                border-radius: 4px;
-                cursor: pointer;
+                @include buttonStyle (20em);
             }
         }
 

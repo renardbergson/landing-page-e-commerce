@@ -1,0 +1,11 @@
+@import 'variables.scss';
+
+@mixin buttonStyle ($width: 12em, $height: 2.5em, $border: 1px solid $dark-color) {
+    width: $width;
+    height: $height;
+    background-color: $light-color;
+    color: $dark-color;
+    border: $border;
+    border-radius: 4px;
+    cursor: pointer;
+}
