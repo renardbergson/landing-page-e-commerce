@@ -55,10 +55,10 @@ function dataShow(data) {
 
                 <span class="oldPrice">De: ${oldPrice} </span>
 
-                <h4 class="newPrice">Por: ${price} </h4>
+                <h4 class="newPrice">Por: R$ ${price},00 </h4>
 
                 <span class="installments">
-                    ou ${count}x de R$${value.toString().replace('.', ',')}
+                    ou ${count}x de R$ ${value.toString().replace('.', ',')}
                 </span>
 
                 <button>Comprar</button>
