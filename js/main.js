@@ -55,22 +55,24 @@ function dataShow(data) {
         offerHTML += `
             <li class="offer">
                 <div class="thumbnail" style="background-image: url(${image});"></div>
+                
+                <div class="fullDescription">
+                    <span class="name"> Produto número ${productID} </span>
 
-                <span class="name"> Produto número ${productID} </span>
+                    <p class="description">
+                        ${description}
+                    </p>
 
-                <p class="description">
-                    ${description}
-                </p>
+                    <span class="oldPrice">De: ${oldPrice} </span>
 
-                <span class="oldPrice">De: ${oldPrice} </span>
+                    <h4 class="newPrice">Por: R$ ${price},00 </h4>
 
-                <h4 class="newPrice">Por: R$ ${price},00 </h4>
+                    <span class="installments">
+                        ou ${count}x de R$ ${_value.toString().replace('.', ',')}
+                    </span>
 
-                <span class="installments">
-                    ou ${count}x de R$ ${_value.toString().replace('.', ',')}
-                </span>
-
-                <button>Comprar</button>
+                    <button>Comprar</button>
+                </div>
             </li>
         `
 

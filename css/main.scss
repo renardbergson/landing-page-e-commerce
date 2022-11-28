@@ -1,6 +1,7 @@
 @import 'base.scss';
 @import 'variables.scss';
 @import 'mixins.scss';
+@import 'breakpoints.scss';
 
 .header {
     width: 100%;
@@ -19,6 +20,17 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
+        @include devices (iPadAir) {
+            width: 80%;
+        }
+        @include devices (tablet) {
+            width: 85%;
+        }
+        @include devices (mobileL) {
+            top: 46%;
+            width: 90%;
+        }
+
         .headerText {
             h1 {
                 font-size: 1.8em;
@@ -32,11 +44,38 @@
 
         .headerLinks {
             display: flex;
-            justify-content: space-between;
+            flex-flow: row wrap;
+            justify-content: center;
             margin-top: 3em;
+            gap: 5em;
+
+            @include devices (laptop) {
+                gap: 3em;
+            }
+            @include devices (tablet) {
+                gap: 2.6em;
+            }
+            @include devices (mobileL) {
+                gap: 2em;
+            }
+            @include devices (mobileS) {
+                gap: 1em;
+            }
 
             button {
-                @include buttonStyle (12em, 2.8em); 
+                @include buttonStyle (12em, 2.8em);
+                
+                @include devices (laptop) {
+                    width: 11em;
+                    height: 2.6em;
+                } 
+                @include devices (mobileL) {
+                    width: 13em;
+                    height: 3em;
+                }
+                @include devices (mobileS) {
+                    width: 11em;
+                }
             }
         }
     }
@@ -57,13 +96,37 @@
     width: 70%;
     margin: 0 auto;
 
+    @include devices (ultra) {
+        width: 75%;
+    }
+    @include devices (laptopL) {
+        width: 70%;
+    }
+    @include devices (laptop) {
+        width: 75%;
+    }
+    @include devices (tablet) {
+        width: 90%;
+    }
+
     .newsLetter {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         color: $dark-color;
+
+        @include devices (mobileL) {
+            flex-direction: column;
+            align-items: center;
+            gap: 2em;
+        }
 
         .newsLetterText {
             width: 55%;
+
+            @include devices (mobileL) {
+                width: 100%;
+            }
 
             span {
                 font-size: 1.2em;
@@ -79,6 +142,10 @@
         #newsLetterForm {
             width: 40%;
             display: block;
+
+            @include devices (mobileL) {
+                width: 100%;
+            }
             
             label {
                 display: block;
@@ -91,10 +158,11 @@
                 input {
                     margin-top: 0.4em;
                     width: 100%;
-                    padding: 0.2em 0;
+                    padding: 0.25em 0;
                     outline: none;
                     color: $dark-color;
                     text-align: center;
+                    font-size: 1.2em;
 
                     &:last-of-type {-moz-appearance: textfield;}
 
@@ -113,6 +181,11 @@
                     top: 2.2em;
                     right: -7em;
                     color: red;
+
+                    @include devices (tablet) {
+                        top: 4.5em;
+                        right: 0em;
+                    }
                 }
             }
 
@@ -146,6 +219,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            @include devices (mobileL) {
+                width: 90%;
+            }
 
             span {
                 font-size: 1.2em;
@@ -189,6 +266,16 @@
         div {
             width: 40%;
             border: 0.5px solid $dark-color;
+
+            @include devices (iPadAir) {
+                width: 37%;
+            }
+            @include devices (mobileL) {
+                width: 28%;
+            }
+            @include devices (mobileS) {
+                width: 20%;
+            }
         }
     }
 
@@ -199,50 +286,79 @@
         .offerList {
             list-style: none;
             display: flex;
-            flex-wrap: wrap;
+            flex-flow: row wrap;
             justify-content: space-between;
             align-content: space-between;
             gap: 3em;
 
+            @include devices (mobileL) {
+                justify-content: center;
+            }
+
             .offer {
-                width: 21%;
+                width: 12em;
+                
+                @include devices (iPadAir) {
+                    display: flex;
+                    width: 22em;
+                    align-items: center;
+                }
+                @include devices (mobileL) {
+                    width: 25em;
+                }
     
                 .thumbnail {
                     //border: 1px solid $dark-color;
                     width: 100%;
                     height: 10em;
                     background-size: cover;
-                    background-position: center;                }
-    
-                .name {
-                    display: block;
-                    margin: 1em 0 0.6em 0;
-                    font-size: 0.9em;
-                }
-    
-                .description {
-                    font-size: 0.7em;
-                    line-height: 1.6em;
-                    margin: 1em 0;
-                }
-    
-                .oldPrice {
-                    font-size: 0.7em;
-                    text-decoration: line-through;
-                }
-    
-                .newPrice {
-                    margin: 0.2em 0 -0.1em 0;
+                    background-position: center;
+
+                    @include devices (iPadAir) {
+                        margin-right: 1em;
+                    }
+                    @include devices (tablet) {
+                        margin-right: 1em;
+                    }
+                    @include devices (mobileL) {
+                        height: 12em;
+                    }
+                    @include devices (mobileS) {
+                        height: 10em;
+                    }
                 }
 
-                .installments {
-                    font-size: 0.7em;
-                    font-weight: bold;
-                }
+                .fullDescription {
+                    .name {
+                        display: block;
+                        margin: 1em 0 0.6em 0;
+                        font-size: 0.9em;
+                    }
+        
+                    .description {
+                        font-size: 0.7em;
+                        line-height: 1.6em;
+                        margin: 1em 0;
+                    }
+        
+                    .oldPrice {
+                        font-size: 0.7em;
+                        text-decoration: line-through;
+                    }
+        
+                    .newPrice {
+                        margin: 0.2em 0 -0.1em 0;
+                    }
     
-                button {
-                    @include buttonStyle (100%);
-                    margin: 1em 0;
+                    .installments {
+                        font-size: 0.7em;
+                        font-weight: bold;
+                    }
+        
+                    button {
+                        @include buttonStyle (100%);
+                        margin: 1em 0;
+                    }
                 }
             }
         }
@@ -275,6 +391,13 @@
         @include buttonStyle (20em, 2.8em);
         display: block;
         margin: 0 auto;
+
+        @include devices (mobileM) {
+            width: 18em;
+        }
+        @include devices (mobileS) {
+            width: 16em;
+        }
     }
 
     .shareContent {
@@ -301,6 +424,10 @@
                 display: flex;
                 justify-content: center;
                 gap: 2em;
+
+                @include devices (mobileL) {
+                    flex-flow: column wrap;
+                }
 
                 div {
                     position: relative;
@@ -336,14 +463,28 @@
 
             input {
                 outline: none;
-                padding: 0.2em 0;
+                padding: 0.25em 0;
                 color: $dark-color;
                 width: 25em;
+                font-size: 0.9em;
                 text-align: center;
+
+                @include devices (laptop) {
+                    width: 23em;
+                }
+                @include devices (tablet) {
+                    width: 21em;
+                }
+                @include devices (mobileL) {
+                    width: 12em
+                }
+                @include devices (mobileL) {
+                    width: 100%
+                }
             }
 
             .shareWithFriend {
-                @include buttonStyle (20em);
+                @include buttonStyle (20em, 2.7em);
             }
         }
 
