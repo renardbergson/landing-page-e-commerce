@@ -88,9 +88,8 @@ function error() {
     const $errorMessage = document.querySelector('.errorMessage')
     const $refreshBtn = document.querySelector('#refreshBtn')
 
-    $offerList.style.display = 'none'
-    $moreOffers.style.display = 'none'
-    $errorMessage.style.display = 'block'
+    goInvisible($offerList, $moreOffers)
+    goVisible($errorMessage)
 
     $refreshBtn.onclick = () => {location.reload()}
 }
@@ -153,10 +152,10 @@ function newsLetterFeedback() {
     const $newsLetterMessage = document.querySelector('.newsLetterMessage')
     const $secondsToReturn = document.querySelector('.secondsToReturn')
     
-    $newsLetterForm.style.display = 'none'
-    $newsLetterMessage.style.display = 'flex'
+    goInvisible($newsLetterForm)
+    $newsLetterMessage.style.display = 'flex' //////////////////////////////////////////////////////////////////////
     
-    let count = 31
+    let count = 16
     
     const countDown = setInterval(() => {
         count--
@@ -170,8 +169,8 @@ function newsLetterFeedback() {
     
     function formReturn() {
         $secondsToReturn.innerText = 'Retornando em...'
-        $newsLetterForm.style.display = 'block'
-        $newsLetterMessage.style.display = 'none'
+        goVisible($newsLetterForm)
+        goInvisible($newsLetterMessage)
         formReset()
     }
 }
@@ -229,9 +228,8 @@ function shareContentFeedback() {
     const shareContentFeedback = document.querySelector('.shareContentFeedback')
     const $secondsToReturn = document.querySelector('.secondsToReturn2')
 
-    paragraph.style.display = 'none'
-    $shareContentForm.style.display = 'none'
-    shareContentFeedback.style.display = 'block'
+    goInvisible(paragraph, $shareContentForm)
+    goVisible(shareContentFeedback)
 
     let count = 6
 
@@ -247,9 +245,18 @@ function shareContentFeedback() {
 
     function shareContentReturn() {
         $secondsToReturn.innerText = 'Retornando em...'
-        paragraph.style.display = 'block'
-        $shareContentForm.style.display = 'block'
-        shareContentFeedback.style.display = 'none'
+        goVisible(paragraph, $shareContentForm)
+        goInvisible(shareContentFeedback)
         formReset()
     }
+}
+// ******************************************* VISIBILITY CONTROL FUNCTIONS *******************************************
+function goInvisible() {
+    const args = [...arguments]
+    return args.forEach(item => item.style.display = 'none')
+}
+
+function goVisible() {
+    const args = [...arguments]
+    return args.forEach(item => item.style.display = 'block')
 }

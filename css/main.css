@@ -323,6 +323,9 @@ body {
 .main .shareContent .shareContentFeedback {
   display: none;
 }
+.main .shareContent .shareContentFeedback .secondsToReturn2 {
+  font-size: 0.7em;
+}
 
 .footer {
   color: #FFFFFF;
