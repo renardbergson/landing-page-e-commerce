@@ -322,7 +322,7 @@ body {
     width: 28%;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   .main .division div {
     width: 25%;
   }

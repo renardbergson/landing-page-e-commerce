@@ -271,7 +271,7 @@
             @include devices (mobileL) {
                 width: 28%;
             }
-            @include devices (mobileM) {
+            @include devices (iphone12_13Pro) {
                 width: 25%;
             }
             @include devices (mobileS) {

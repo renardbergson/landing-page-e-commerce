@@ -36,6 +36,12 @@
         }
     };
 
+    @if $breakpoint == iphone12_13Pro {
+        @media (max-width: 390px) {
+            @content
+        }
+    };
+
     @if $breakpoint == mobileM {
         @media (max-width: 375px) {
             @content
