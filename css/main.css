@@ -8,6 +8,7 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
   background-color: rgb(250, 250, 250);
+  width: 100%;
 }
 @media (max-width: 2560px) {
   body {
@@ -141,6 +142,7 @@ body {
 .main {
   width: 70%;
   margin: 0 auto;
+  position: relative;
 }
 @media (max-width: 2560px) {
   .main {
@@ -318,6 +320,11 @@ body {
 @media (max-width: 425px) {
   .main .division div {
     width: 28%;
+  }
+}
+@media (max-width: 375px) {
+  .main .division div {
+    width: 25%;
   }
 }
 @media (max-width: 320px) {

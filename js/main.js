@@ -1,5 +1,6 @@
 // ****************************************************** VARIABLES *****************************************************
 const $newsLetterForm = document.querySelector('#newsLetterForm')
+const $toast1 = document.querySelector('.toast1')
 
 const $offerList = document.querySelector('.offerList')
 const $moreOffers = document.querySelector('.moreOffers')
@@ -252,6 +253,7 @@ function shareContentFeedback() {
         formReset()
     }
 }
+
 // ******************************************* VISIBILITY CONTROL FUNCTIONS *******************************************
 function goInvisible() {
     const args = [...arguments]
