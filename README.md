@@ -28,7 +28,8 @@ Meu objetivo principal, desta vez, era produzir uma página mais robusta e funci
 ### Preview
 Este é um pequeno preview da aplicação <br> 
 <br>
-![]()
+
+https://user-images.githubusercontent.com/97261795/205414774-ee3503e6-ea2a-4985-bfd9-dacc61ee3db7.mov
 
 ### Link
   •	[Landing Page v2](https://landing-page-v2-rb.netlify.app) 
