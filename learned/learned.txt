@@ -1,0 +1,9 @@
+1 - the 'defer' parameter to load javascript at the 
+    start of the document but only if the document 
+    is already loaded
+2 - how to make a skew division
+3 - method .toString() 
+4 - method .replace('x' 'y')
+5 - method .isInteger(n)
+6 - how to build a function that receives multiples
+    arguments with "arguments" funcionality 
