@@ -20,6 +20,11 @@ body {
     font-size: 16px;
   }
 }
+@media (max-width: 1280px) {
+  body {
+    font-size: 15px;
+  }
+}
 @media (max-width: 1024px) {
   body {
     font-size: 13px;
@@ -28,6 +33,11 @@ body {
 @media (max-width: 793px) {
   body {
     font-size: 14px;
+  }
+}
+@media (max-width: 540px) {
+  body {
+    font-size: 13px;
   }
 }
 @media (max-width: 280px) {
@@ -60,6 +70,16 @@ body {
 @media (max-width: 793px) {
   .header .headerElements {
     width: 85%;
+  }
+}
+@media (max-width: 540px) {
+  .header .headerElements {
+    width: 79%;
+  }
+}
+@media (max-width: 540px) {
+  .header .headerElements {
+    top: 46%;
   }
 }
 @media (max-width: 425px) {
@@ -95,6 +115,11 @@ body {
 @media (max-width: 425px) {
   .header .headerElements .headerLinks {
     gap: 2em;
+  }
+}
+@media (max-width: 360px) {
+  .header .headerElements .headerLinks {
+    gap: 1.3em;
   }
 }
 @media (max-width: 320px) {
@@ -159,6 +184,11 @@ body {
     width: 75%;
   }
 }
+@media (max-width: 912px) {
+  .main {
+    width: 82%;
+  }
+}
 @media (max-width: 793px) {
   .main {
     width: 90%;
@@ -192,6 +222,16 @@ body {
   font-size: 0.7em;
   line-height: 1.6em;
   margin-top: 1.7em;
+}
+@media (max-width: 540px) {
+  .main .newsLetter .newsLetterText p {
+    line-height: 1.2em;
+  }
+}
+@media (max-width: 425px) {
+  .main .newsLetter .newsLetterText p {
+    line-height: 1.6em;
+  }
 }
 .main .newsLetter #newsLetterForm {
   width: 40%;
@@ -317,6 +357,11 @@ body {
     width: 37%;
   }
 }
+@media (max-width: 540px) {
+  .main .division div {
+    width: 33%;
+  }
+}
 @media (max-width: 425px) {
   .main .division div {
     width: 28%;
@@ -344,6 +389,11 @@ body {
   align-content: space-between;
   gap: 3em;
 }
+@media (max-width: 540px) {
+  .main .offers .offerList {
+    justify-content: center;
+  }
+}
 @media (max-width: 425px) {
   .main .offers .offerList {
     justify-content: center;
@@ -357,6 +407,11 @@ body {
     display: flex;
     width: 22em;
     align-items: center;
+  }
+}
+@media (max-width: 540px) {
+  .main .offers .offerList .offer {
+    width: 30em;
   }
 }
 @media (max-width: 425px) {
@@ -378,10 +433,21 @@ body {
 @media (max-width: 793px) {
   .main .offers .offerList .offer .thumbnail {
     margin-right: 1em;
+    width: 100%;
+    height: 10em;
+  }
+}
+@media (max-width: 540px) {
+  .main .offers .offerList .offer .thumbnail {
+    margin-right: 4em;
+    width: 80%;
+    height: 13em;
   }
 }
 @media (max-width: 425px) {
   .main .offers .offerList .offer .thumbnail {
+    margin-right: 1em;
+    width: 100%;
     height: 12em;
   }
 }
@@ -528,6 +594,11 @@ body {
 @media (max-width: 793px) {
   .main .shareContent form input {
     width: 21em;
+  }
+}
+@media (max-width: 540px) {
+  .main .shareContent form input {
+    width: 19em;
   }
 }
 @media (max-width: 425px) {

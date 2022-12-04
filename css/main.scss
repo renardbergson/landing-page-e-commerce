@@ -25,6 +25,12 @@
         @include devices (tablet) {
             width: 85%;
         }
+        @include devices (surfaceDuo) {
+            width: 79%;
+        }
+        @include devices (surfaceDuo) {
+            top: 46%;
+        }
         @include devices (mobileL) {
             top: 46%;
             width: 90%;
@@ -56,6 +62,9 @@
             }
             @include devices (mobileL) {
                 gap: 2em;
+            }
+            @include devices (galaxyS8Plus) {
+                gap: 1.3em;
             }
             @include devices (mobileS) {
                 gap: 1em;
@@ -104,6 +113,9 @@
     @include devices (laptop) {
         width: 75%;
     }
+    @include devices (surfacePro7) {
+        width: 82%;
+    }
     @include devices (tablet) {
         width: 90%;
     }
@@ -135,6 +147,13 @@
                 font-size: 0.7em;
                 line-height: 1.6em;
                 margin-top: 1.7em;
+
+                @include devices (surfaceDuo) {
+                    line-height: 1.2em;
+                }
+                @include devices (mobileL) {
+                    line-height: 1.6em;
+                }
             }
         }
 
@@ -268,6 +287,9 @@
             @include devices (iPadAir) {
                 width: 37%;
             }
+            @include devices (surfaceDuo) {
+                width: 33%;
+            }
             @include devices (mobileL) {
                 width: 28%;
             }
@@ -292,6 +314,9 @@
             align-content: space-between;
             gap: 3em;
 
+            @include devices (surfaceDuo) {
+                justify-content: center;
+            }
             @include devices (mobileL) {
                 justify-content: center;
             }
@@ -303,6 +328,9 @@
                     display: flex;
                     width: 22em;
                     align-items: center;
+                }
+                @include devices (surfaceDuo) {
+                    width: 30em;
                 }
                 @include devices (mobileL) {
                     width: 25em;
@@ -319,8 +347,17 @@
                     }
                     @include devices (tablet) {
                         margin-right: 1em;
+                        width: 100%;
+                        height: 10em;
+                    }
+                    @include devices (surfaceDuo) {
+                        margin-right: 4em;
+                        width: 80%;
+                        height: 13em;
                     }
                     @include devices (mobileL) {
+                        margin-right: 1em;
+                        width: 100%;
                         height: 12em;
                     }
                     @include devices (mobileS) {
@@ -474,6 +511,9 @@
                 }
                 @include devices (tablet) {
                     width: 21em;
+                }
+                @include devices (surfaceDuo) {
+                    width: 19em;
                 }
                 @include devices (mobileL) {
                     width: 12em

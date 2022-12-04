@@ -19,11 +19,17 @@ body {
     @include devices (laptopL) {
         font-size: 16px;
     }
+    @include devices (nextHubMax) {
+        font-size: 15px;
+    }
     @include devices (laptop) {
         font-size: 13px;
     }
     @include devices (tablet) {
         font-size: 14px;
+    }
+    @include devices (surfaceDuo) {
+        font-size: 13px;
     }
     @include devices (galaxyZFold) {
         font-size: 12px;
