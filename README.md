@@ -1,7 +1,7 @@
 # Landing Page 2
 
 ### Descrição
-Esta é a segunda landing page na qual trabalhei. Desta vez, a aplicação possui uma grade de produtos fictícios e um formulário de newsletter. Toda a informação sobre eles é obtida através de uma API e esse processo ocorre de forma paginada, retornando 8 produtos a cada requisição. Toda vez que o usuário interage com o botão "mais produtos aqui", uma nova consulta é realizada, mantendo os itens anteriores na tela.
+Esta é a segunda landing page na qual trabalhei. Desta vez, ela possui uma grade de produtos fictícios e um formulário de newsletter. Toda a informação sobre eles é obtida através de uma API e esse processo ocorre de forma paginada, retornando 8 produtos a cada requisição. Cada vez que o usuário interage com o botão "mais produtos aqui", uma nova consulta é realizada, mantendo os itens anteriores na tela.
 
 ### Objetivos
 Meu objetivo principal, desta vez, era produzir uma página mais robusta e funcional do que a primeira versão, com um design responsivo e JavaScript puro. Além disso, queria aproveitar para colocar em prática boa parte dos conhecimentos adquiridos até aqui e tentar escrever o código JS da forma mais concisa possível.
